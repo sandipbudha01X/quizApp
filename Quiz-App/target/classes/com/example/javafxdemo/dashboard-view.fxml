@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.geometry.Insets?>
+
+<?import java.lang.String?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.javafxdemo.controller.DashboardController"
+      styleClass="dashboard-background">
+
+    <AnchorPane styleClass="dashboard-header">
+        <Label fx:id="accountNameText" styleClass="account-name-label" text="Welcome, John Doe" />
+    </AnchorPane>
+
+    <VBox>
+        <Label text="Quiz Application" styleClass="dashboard-title">
+            <padding>
+                <Insets top="10.0" />
+            </padding>
+        </Label>
+    </VBox>
+
+    <VBox styleClass="quiz-content">
+        <Label styleClass="welcome-label">
+            <text>
+                <String fx:id="welcomeLabelText"/>
+            </text>
+        </Label>
+        <Label text="Test Your Knowledge" styleClass="quiz-title" />
+
+        <Button fx:id="playQuizButton" text="Play Quiz" styleClass="play-quiz-button" onAction="#playQuizButtonClicked" />
+        <ProgressBar fx:id="progressBar" styleClass="progress-bar" />
+    </VBox>
+</VBox>
